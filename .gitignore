@@ -1,0 +1,2 @@
+# Environment / secrets
+backend/src/main/resources/application.properties
