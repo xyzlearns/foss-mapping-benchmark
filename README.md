@@ -18,6 +18,17 @@ The goal of this project is to understand how different routing engines calculat
 - Store benchmark cases and routing results in PostgreSQL
 - Expose routing functionality through a Spring Boot REST API
 
+## Android app
+
+The Android client is a single Jetpack Compose screen. It sends addresses to
+`POST /api/routes/compare` with Retrofit, renders OSRM (blue), Valhalla (green),
+and Google (red) geometries on MapLibre, and shows distance and duration
+comparisons over the map.
+
+`android/foss-benchmark-app/app/build.gradle.kts` defaults its backend URL to
+`http://10.0.2.2:8080/`, which is the Android emulator's route to a local
+backend. Change `API_BASE_URL` for a physical device or deployed backend.
+
 ## Architecture
 
 ```text

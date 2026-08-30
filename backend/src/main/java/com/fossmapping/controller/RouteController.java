@@ -52,6 +52,8 @@ public class RouteController {
             );
         }
 
+        System.out.println("start");
+
         RouteResult osrm =
                 osrmService.getRoute(
                         start.longitude(),
@@ -59,6 +61,8 @@ public class RouteController {
                         end.longitude(),
                         end.latitude()
                 );
+
+        System.out.println("osrm");
 
         RouteResult valhalla =
                 valhallaService.getRoute(
@@ -68,6 +72,8 @@ public class RouteController {
                         end.latitude()
                 );
 
+        System.out.println("valhalla");
+
         RouteResult google =
                 googleRoutesService.getRoute(
                         start.longitude(),
@@ -75,6 +81,8 @@ public class RouteController {
                         end.longitude(),
                         end.latitude()
                 );
+
+        System.out.println("google");
 
         return new RouteComparisonResponse(
                 osrm,

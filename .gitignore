@@ -1,2 +1,26 @@
 # Environment / secrets
 backend/src/main/resources/application.properties
+# IntelliJ / Android Studio
+.idea/
+**/.idea/
+
+# Kotlin
+.kotlin/
+**/.kotlin/
+
+# Gradle
+.gradle/
+**/.gradle/
+
+# Build output
+build/
+**/build/
+
+# Local configuration
+local.properties
+
+# OS files
+.DS_Store
+
+# Generated Gradle JVM configuration
+**/gradle/gradle-daemon-jvm.properties
